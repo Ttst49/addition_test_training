@@ -107,4 +107,19 @@ mod tests {
         assert_eq!(5, value);
     }
 
+    #[test]
+    fn adding_deux_a_deux() {
+        assert_eq!(4, add_two(2));
+    }
+
+    #[test]
+    fn adding_deux_a_trois() {
+        assert_eq!(5, add_two(3));
+    }
+
+    #[test]
+    fn cent() {
+        assert_eq!(102, add_two(100));
+    }
+
 }
