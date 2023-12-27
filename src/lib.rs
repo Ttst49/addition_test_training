@@ -13,7 +13,14 @@ pub struct Supposition {
     value: i32,
 }
 
-
+impl Supposition {
+    pub fn new(value: i32) -> Supposition {
+        if value < 1 || value > 100 {
+            panic!("La supposition doit se trouver entre 1 et 100, et nous avons {}.", value);
+        }
+        Supposition { value }
+    }
+}
 
 #[cfg(test)]
 mod tests {
