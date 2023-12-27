@@ -95,4 +95,16 @@ mod tests {
         Supposition::new(200);
     }
 
+    #[test]
+    fn this_test_work() {
+        let value = print_and_return_10(4);
+        assert_eq!(10, value);
+    }
+
+    #[test]
+    fn this_test_doesnt_work() {
+        let value = print_and_return_10(8);
+        assert_eq!(5, value);
+    }
+
 }
