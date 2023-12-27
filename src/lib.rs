@@ -23,7 +23,14 @@ mod tests {
         assert_eq!(4,add_two(2))
     }
 
-
+    //#[test]
+    fn check_reception(){
+        let result = reception("Caroline");
+        assert!(result.contains("Caroline"),
+                "Le message ne contient pas le nom, il vaut '{}'",
+                result
+        );
+    }
 
     //#[test]
     fn doesnt_work(){
