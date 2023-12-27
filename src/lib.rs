@@ -29,7 +29,7 @@ pub struct Supposition {
 impl Supposition {
     pub fn new(value: i32) -> Supposition {
         if value < 1 || value > 100 {
-            panic!("La supposition doit se trouver entre 1 et 100, et nous avons {}.", value);
+            panic!("La supposition doit être plus petite ou égale à 100");
         }
         Supposition { value }
     }
@@ -39,9 +39,12 @@ impl Supposition {
 mod tests {
     use super::*;
     #[test]
-    fn exploration() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+    fn it_works() -> Result<(), String> {
+        if 2 + 2 == 4 {
+            Ok(())
+        } else {
+            Err(String::from("deux plus deux ne vaut pas quatre"))
+        }
     }
 
     #[test]
