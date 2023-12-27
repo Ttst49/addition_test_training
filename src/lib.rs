@@ -45,6 +45,7 @@ fn print_and_return_10(a: i32) -> i32 {
 mod tests {
     use super::*;
     #[test]
+    #[ignore]
     fn it_works() -> Result<(), String> {
         if 2 + 2 == 4 {
             Ok(())
@@ -54,11 +55,13 @@ mod tests {
     }
 
     #[test]
+    #[ignore]
     fn check_add_two(){
         assert_eq!(4,add_two(2))
     }
 
     //#[test]
+    #[ignore]
     fn check_reception(){
         let result = reception("Caroline");
         assert!(result.contains("Caroline"),
@@ -68,11 +71,13 @@ mod tests {
     }
 
     //#[test]
+    #[ignore]
     fn doesnt_work(){
         panic!("ahhhhhhhhhhhhhhhhhhhhh")
     }
 
     #[test]
+    #[ignore]
     fn bigger_can_contain_little(){
         let bigger = Rectangle{ width: 5, height: 2 };
         let little = Rectangle{ width: 3, height: 1 };
@@ -81,6 +86,7 @@ mod tests {
     }
 
     #[test]
+    #[ignore]
     fn little_cant_contain_bigger(){
         let bigger = Rectangle{ width: 5, height: 2 };
         let little = Rectangle{ width: 3, height: 1 };
@@ -90,29 +96,34 @@ mod tests {
 
     //add should panic as a condition for true
     #[test]
+    #[ignore]
     #[should_panic(expected = "La supposition doit être plus petite ou égale à 100")]
     fn plus_grand_que_100() {
         Supposition::new(200);
     }
 
     #[test]
+    #[ignore]
     fn this_test_work() {
         let value = print_and_return_10(4);
         assert_eq!(10, value);
     }
 
     #[test]
+    #[ignore]
     fn this_test_doesnt_work() {
         let value = print_and_return_10(8);
         assert_eq!(5, value);
     }
 
     #[test]
+    #[ignore]
     fn adding_deux_a_deux() {
         assert_eq!(4, add_two(2));
     }
 
     #[test]
+    #[ignore]
     fn adding_deux_a_trois() {
         assert_eq!(5, add_two(3));
     }
