@@ -9,6 +9,12 @@ pub fn reception(name: &str)->String{
     format!("Bonjour")
 }
 
+pub struct Supposition {
+    value: i32,
+}
+
+
+
 #[cfg(test)]
 mod tests {
     use super::*;
