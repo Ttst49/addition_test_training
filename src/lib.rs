@@ -81,7 +81,7 @@ mod tests {
 
     //add should panic as a condition for true
     #[test]
-    #[should_panic]
+    #[should_panic(expected = "La supposition doit être plus petite ou égale à 100")]
     fn plus_grand_que_100() {
         Supposition::new(200);
     }
