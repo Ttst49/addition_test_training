@@ -19,7 +19,21 @@ mod tests {
         panic!("ahhhhhhhhhhhhhhhhhhhhh")
     }
 
+    #[test]
+    fn bigger_can_contain_little(){
+        let bigger = Rectangle{ width: 5, height: 2 };
+        let little = Rectangle{ width: 3, height: 1 };
 
+        assert!(bigger.can_contain(&little));
+    }
+
+    #[test]
+    fn little_cant_contain_bigger(){
+        let bigger = Rectangle{ width: 5, height: 2 };
+        let little = Rectangle{ width: 3, height: 1 };
+
+        assert!(!little.can_contain(&bigger))
+    }
 
 }
 
