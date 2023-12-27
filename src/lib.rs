@@ -35,6 +35,12 @@ impl Supposition {
     }
 }
 
+//create a testing function for learning purpose
+fn print_and_return_10(a: i32) -> i32 {
+    println!("J'ai obtenu la valeur {}", a);
+    10
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
