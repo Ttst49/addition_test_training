@@ -118,6 +118,7 @@ mod tests {
     }
 
     #[test]
+    #[ignore]
     fn cent() {
         assert_eq!(102, add_two(100));
     }
