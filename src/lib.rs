@@ -1,6 +1,19 @@
 pub fn add(left: usize, right: usize) -> usize {
     left + right
 }
+
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    fn can_contain(&self, other: &Rectangle) -> bool {
+        self.width > other.width && self.height > other.height
+    }
+}
+
 pub fn add_two(a: i64)->i64{
     a + 2
 }
@@ -66,16 +79,11 @@ mod tests {
         assert!(!little.can_contain(&bigger))
     }
 
-}
-
-#[derive(Debug)]
-struct Rectangle {
-    width: u32,
-    height: u32,
-}
-
-impl Rectangle {
-    fn can_contain(&self, other: &Rectangle) -> bool {
-        self.width > other.width && self.height > other.height
+    //add should panic as a condition for true
+    #[test]
+    #[should_panic]
+    fn plus_grand_que_100() {
+        Supposition::new(200);
     }
+
 }
