@@ -2,7 +2,11 @@ pub fn add(left: usize, right: usize) -> usize {
     left + right
 }
 pub fn add_two(a: i64)->i64{
-    a +2
+    a + 2
+}
+
+pub fn reception(name: &str)->String{
+    format!("Bonjour")
 }
 
 #[cfg(test)]
@@ -18,6 +22,8 @@ mod tests {
     fn check_add_two(){
         assert_eq!(4,add_two(2))
     }
+
+
 
     //#[test]
     fn doesnt_work(){
